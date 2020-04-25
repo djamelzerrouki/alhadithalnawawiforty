@@ -1,7 +1,8 @@
 # Al Hadith Alnawawi Forty
 
-A new Flutter application.
-
+تطبيق الأربعون النووية هو تطبيق إسلامى يحتوى على 42 حديثا نبويا شريفا صحيحا.
+تطبيق يحتوي علي احاديث نبوية شريفة بدون أنترنت و الاربعين نووية بدون نت
+أحاديث رسول
 ## Getting Started
 
 This project is a starting point for a Flutter application.
