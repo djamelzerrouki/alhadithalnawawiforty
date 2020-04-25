@@ -3,6 +3,24 @@
 تطبيق الحديث النووي الأربعون هو تطبيق إسلامى يحتوى على 42 حديثا نبويا شريفا صحيحا.
 تطبيق يحتوي علي احاديث نبوية شريفة بدون أنترنت و الاربعين نووية بدون نت
 أحاديث رسول
+
+<div style="text-align: center">
+    <table>
+        <tr>
+            <td style="text-align: center">
+                    <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805603.png" width="300"/>
+           </td>            
+            <td style="text-align: center">   
+                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805597.png" width="300"/>
+            </td>
+         
+      </tr>
+      
+      
+      
+  </table>
+  </div>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
