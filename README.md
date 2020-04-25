@@ -13,11 +13,7 @@
             <td style="text-align: center">   
                      <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805597.png" width="300"/>
             </td>
-         
       </tr>
-      
-      
-      
   </table>
   </div>
 
