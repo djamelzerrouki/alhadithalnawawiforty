@@ -14,6 +14,9 @@ import 'model/hadithe.dart';
 //  }
 //}
 
+
+
+
 class HadithPage extends StatefulWidget {
   final Hadith hadith;
    HadithPage( {this.hadith});
