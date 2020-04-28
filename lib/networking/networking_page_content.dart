@@ -2,6 +2,7 @@ import 'package:alnawawiforty/model/hadithe.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:share/share.dart';
 
 class NetworkingPageContent extends StatefulWidget {
   final String data;
@@ -94,6 +95,21 @@ class TextAndButton extends StatelessWidget {
 Center(
   child: _convertHadith(context,content),
 ),
+
+          Center(
+            child: MaterialButton(
+              elevation: 5.0,
+              height: 50.0,
+              minWidth: 150,
+              color: Colors.green,
+              textColor: Colors.white,
+              child: Icon(Icons.share),
+              onPressed: () {
+                Share.share(
+                    content);
+              },
+            ),
+          ),
 
 //          RaisedButton(
 //            color: Theme.of(context).primaryColor,
