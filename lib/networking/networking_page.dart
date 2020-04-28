@@ -4,8 +4,10 @@ import './networking_page_content.dart';
 import './networking_page_header.dart';
 
 class NetworkingPage extends StatelessWidget {
-   final Hadith hadith;
-  NetworkingPage( {this.hadith});
+
+  final Hadith hadith;
+  final String data;
+  NetworkingPage( {this.hadith,this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class NetworkingPage extends StatelessWidget {
               maxExtent: 250.0,
             ),
           ),
-          NetworkingPageContent(hadith: hadith,),
+          NetworkingPageContent(data: data,),
           // SliverFillRemaining(
           //   child: Center(
           //     child: Text(

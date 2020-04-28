@@ -135,6 +135,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
+  rxdart:
+    dependency: transitive
+    description:
+      name: rxdart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.23.1"
+  scroll_bars_common:
+    dependency: transitive
+    description:
+      name: scroll_bars_common
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
+  scroll_bottom_navigation_bar:
+    dependency: "direct main"
+    description:
+      name: scroll_bottom_navigation_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0+1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -204,4 +225,4 @@ packages:
     source: hosted
     version: "3.5.0"
 sdks:
-  dart: ">=2.4.0 <3.0.0"
+  dart: ">=2.6.0 <3.0.0"

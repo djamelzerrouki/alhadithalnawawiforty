@@ -6,6 +6,7 @@ import 'package:alnawawiforty/model/hadithe.dart';
 import 'dart:math' as math;
 
 import 'networking/networking_page.dart';
+import 'testbar.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
@@ -109,7 +110,7 @@ class CollapsingList extends StatelessWidget {
                     trailing:Icon(Icons.library_books,color: Colors.brown,) ,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NetworkingPage(hadith: item,)));
+                          builder: (context) =>HadithPage(hadith: item,)));
                         },
                     ),
                   ),

@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:alnawawiforty/model/hadithe.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -19,15 +20,19 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
+    var size = MediaQuery.of(context).size;
+
     return Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(
-          'assets/item.png',
-          fit: BoxFit.cover,
-        ),
+
         Container(
+          height: size.height * .4,
           decoration: BoxDecoration(
+            image:   DecorationImage(
+           image:   AssetImage('assets/item.png', ),
+              fit: BoxFit.cover,
+            ),
             gradient: LinearGradient(
               colors: [Colors.transparent, Colors.black54],
               stops: [0.5, 1.0],
@@ -35,26 +40,33 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
               end: Alignment.bottomCenter,
               tileMode: TileMode.repeated,
             ),
+         borderRadius: BorderRadius.only(
+           bottomLeft: Radius.circular(50),
+           bottomRight: Radius.circular(50)
+         )
           ),
+
         ),
         Positioned(
           left: 16.0,
           right: 16.0,
-          bottom: 16.0,
+          top: 64.0,
           child: Column(
             children: <Widget>[
+
               Text(
                 hadith.key ,
-                style: TextStyle(
+                style: TextStyle(fontWeight: FontWeight.bold,
                   fontSize: 32.0,
-                  color: Colors.white.withOpacity(titleOpacity(shrinkOffset)),
+                  color: Colors.white,
                 ),
               ),
               Text(
                 hadith.nameHadith,
-                style: TextStyle(
-                  fontSize: 32.0,
-                  color: Colors.white.withOpacity(titleOpacity(shrinkOffset)),
+                style: TextStyle(fontWeight: FontWeight.bold,
+ decorationColor: Colors.black,
+                   fontSize: 32.0,
+                   color: Colors.white,
                 ),
               ),
 

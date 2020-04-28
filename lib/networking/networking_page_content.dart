@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class NetworkingPageContent extends StatefulWidget {
-  final Hadith hadith;
-  NetworkingPageContent( {this.hadith});
+  final String data;
+  NetworkingPageContent( {this.data});
 
   @override
   _NetworkingPageContentState createState() => _NetworkingPageContentState();
@@ -24,7 +24,7 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
     if (shouldFail) {
       throw PlatformException(code: '404');
     }
-    return widget.hadith.textHadith;
+    return widget.data;
   }
 
   void _retry() {
@@ -95,49 +95,22 @@ Center(
   child: _convertHadith(context,content),
 ),
 
-          RaisedButton(
-            color: Theme.of(context).primaryColor,
-            child: Text(buttonText,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline
-                    .copyWith(color: Colors.white)),
-            onPressed: onPressed,
-          ),
+//          RaisedButton(
+//            color: Theme.of(context).primaryColor,
+//            child: Text(buttonText,
+//                style: Theme.of(context)
+//                    .textTheme
+//                    .headline
+//                    .copyWith(color: Colors.white)),
+//            onPressed: onPressed,
+//          ),
         ],
       ),
     );
   }
 }
 
-Widget _getColoredHadithText(BuildContext context,String text) {
-  if (text.contains('{')) {
-    var preHadith = text.substring(0, text.indexOf('{'));
-    var postHadith = text.substring(text.indexOf('{'));
-    var Hadith = postHadith;
-    var other;
-    if (postHadith.contains('}')) {
-      Hadith = postHadith.substring(0, postHadith.indexOf('}'));
-      other = postHadith.substring(postHadith.indexOf('}'));
-    }
-    return RichText(
-      textAlign: TextAlign.right,
-      text: TextSpan(
-        style: DefaultTextStyle.of(context).style,
-        children: <TextSpan>[
-          TextSpan(text: preHadith,style: TextStyle(color: Colors.brown, fontSize: 18)),
-          TextSpan(text: Hadith, style: TextStyle(color: Colors.green, fontSize: 18)),
-          TextSpan(text: other != null ? other : "",style: TextStyle(color: Colors.brown, fontSize: 18)),
-        ],
 
-      ),
-      textDirection: TextDirection.rtl,
-
-    );
-  } else {
-    return Text(text);
-  }
-}
 
 RichText _convertHadith(BuildContext context,String text) {
 
