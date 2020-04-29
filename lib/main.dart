@@ -5,6 +5,7 @@ import 'package:alnawawiforty/model/hadithe.dart';
  import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'botombar.dart';
 import 'networking/networking_page.dart';
 import 'testbar.dart';
 void main() => runApp(MyApp());
@@ -78,14 +79,15 @@ class CollapsingList extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 Hadith item = snapshot.data[index];
                 //delete one register for id
-                return Dismissible(
-                  key: UniqueKey(),
-                  background: Container(color: Colors.red),
-                  onDismissed: (diretion) {
+                return
+//                  Dismissible(
+//                  key: UniqueKey(),
+//                  background: Container(color: Colors.red),
+//                  onDismissed: (diretion) {
+//
+//                  },
 
-                  },
-
-                  child: Card(
+                    Card(
 
                     margin: EdgeInsets.all(3.0),
                     elevation: 1.0,
@@ -110,11 +112,14 @@ class CollapsingList extends StatelessWidget {
                     trailing:Icon(Icons.library_books,color: Colors.brown,) ,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) =>HadithPage(hadith: item,)));
+                          builder: (context) =>
+                          //HadithPage(hadith: item,)
+                              HomeHadith(hadith: item,)
+                        ));
                         },
                     ),
-                  ),
-                );
+                  );
+            //    );
               },
             );
           } else {

@@ -1,5 +1,7 @@
 import 'package:alnawawiforty/networking/networking_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 import 'model/hadithe.dart';
 
@@ -26,6 +28,7 @@ class HadithPage extends StatefulWidget {
 
 class _HadithPageState extends State<HadithPage> {
   int _selectedIndex = 0;
+  bool clickedCentreFAB = false; //boolean used to handle container animation which expands from the FAB
 
 
  // List<Widget> _widgets = <Widget>[TextHadithPage(), ExplanationHadithPage(),TranslateNarratorPage()];
@@ -56,6 +59,23 @@ class _HadithPageState extends State<HadithPage> {
         ],
         physics: NeverScrollableScrollPhysics(),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, //specify the location of the FAB
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Share.share(
+              widget.hadith.textHadith,
+              subject: widget.hadith.nameHadith);
+          setState(() {
+            clickedCentreFAB = !clickedCentreFAB; //to update the animated container
+          });
+        },
+        tooltip: "Centre FAB",
+        child: Container(
+          margin: EdgeInsets.all(15.0),
+          child: Icon(Icons.add),
+        ),
+        elevation: 4.0,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -67,13 +87,16 @@ class _HadithPageState extends State<HadithPage> {
             title: Text('شرح الحديث'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.transform),
+             icon: Icon(Icons.transform),
             title: Text('ترجمة الراوي'),
           ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
+
+
+
     );
   }
 }

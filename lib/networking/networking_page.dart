@@ -1,5 +1,6 @@
 import 'package:alnawawiforty/model/hadithe.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import './networking_page_content.dart';
 import './networking_page_header.dart';
 
@@ -32,8 +33,11 @@ class NetworkingPage extends StatelessWidget {
           //     ),
           //   ),
           // ),
+
+
         ],
       ),
+
     );
   }
 }
