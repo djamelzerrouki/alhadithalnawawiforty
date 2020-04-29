@@ -56,18 +56,30 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
 
               Text(
                 hadith.key ,
-                style: TextStyle(fontWeight: FontWeight.bold,
-                  fontSize: 32.0,
-                  color: Colors.white,
+                style: TextStyle(
+                  fontSize: size.width * .08,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = size.width*.005
+                    ..color = Colors.black87,
                 ),
               ),
               Text(
                 hadith.nameHadith,
-                style: TextStyle(fontWeight: FontWeight.bold,
- decorationColor: Colors.black,
-                   fontSize: 32.0,
-                   color: Colors.white,
+
+                style: TextStyle(
+                  fontSize: size.width * .08,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = size.width*.005
+                    ..color = Colors.black87,
                 ),
+
+//                style: TextStyle(fontWeight: FontWeight.bold,
+// decorationColor: Colors.black,
+//                   fontSize: size.width * .08,
+//                   color: Colors.black,
+//                ),
               ),
 
             ],

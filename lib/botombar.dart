@@ -45,7 +45,7 @@ class HomeHadithState extends State<HomeHadith> {
     setState(() {
 
       selectedIndex = index;
-      text = buttonText;
+      text = buttonText+' \n';
     });
   }
   NetworkingPage hadithPage( ) {
@@ -64,7 +64,7 @@ class HomeHadithState extends State<HomeHadith> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, //specify the location of the FAB
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.black38,
         onPressed: () {
           setState(() {
             clickedCentreFAB = !clickedCentreFAB; //to update the animated container
@@ -124,7 +124,7 @@ class HomeHadithState extends State<HomeHadith> {
                 },
                 iconSize: 27.0,
                 icon: Icon(
-                  Icons.library_books,
+                  Icons.collections_bookmark,
                    color: selectedIndex == 2
                       ? Colors.green
                       : Colors.grey.shade400,

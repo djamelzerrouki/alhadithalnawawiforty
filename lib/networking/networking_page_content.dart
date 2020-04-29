@@ -20,7 +20,7 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
 //        content: widget.data,
 //      ),
       child:   Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(top: 8.0,bottom: 2.0,left: 5.0,right: 8.0),
         child: Center(
           child: _convertHadith(context,widget.data),
         ),

@@ -6,8 +6,7 @@ import 'package:alnawawiforty/model/hadithe.dart';
 import 'dart:math' as math;
 
 import 'botombar.dart';
-import 'networking/networking_page.dart';
-import 'testbar.dart';
+
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
