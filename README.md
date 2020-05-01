@@ -12,11 +12,13 @@
             <td style="text-align: center">
                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805603.png" width="300"/>
            </td>            
-            <td style="text-align: center">   
-                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805597.png" width="300"/>
+            <!-- https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/capt2.png -->
+            </td>           <td style="text-align: center">   
+                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/capt2.png" width="300"/>
             </td>           <td style="text-align: center">   
                      <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/MyVideo-1.gif" width="300"/>
             </td>
+        
       </tr>
   </table>
   </div>
