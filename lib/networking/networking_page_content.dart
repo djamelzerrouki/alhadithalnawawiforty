@@ -2,6 +2,8 @@ import 'package:alnawawiforty/model/hadithe.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../playeraudio.dart';
+
 
 class NetworkingPageContent extends StatefulWidget {
   final String data;
@@ -16,13 +18,23 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
   Widget build(BuildContext context) {
 
     return   SliverToBoxAdapter(
+
 //      child: TextAndButton(
 //        content: widget.data,
 //      ),
       child:   Padding(
         padding: const EdgeInsets.only(top: 8.0,bottom: 2.0,left: 5.0,right: 8.0),
-        child: Center(
-          child: _convertHadith(context,widget.data),
+        child: Column(
+          children: <Widget>[
+
+
+            Center(
+              child: _convertHadith(context,widget.data),
+            ),
+          //  LocalAudio(localAudioPath:'disco1.mp3'),
+
+
+          ],
         ),
       ),
     );
@@ -42,7 +54,7 @@ RichText _convertHadith(BuildContext context,String text) {
 
     if (texts.length > 1) {
       return List.from(t)
-        ..addAll(["{${texts.first}}", "${e.substring(0,texts.first.length)}"]);
+        ..addAll(["{${texts.first}}", "${e.substring(texts.first.length+1)}"]);
     }
     return List.from(t)..add("{${texts.first}");
   });

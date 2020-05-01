@@ -1,3 +1,4 @@
+import 'package:alnawawiforty/playeraudio.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
@@ -29,7 +30,7 @@ class HomeHadith extends StatefulWidget {
 }
 
 class HomeHadithState extends State<HomeHadith> {
-
+  bool bol = true;
   bool clickedCentreFAB = false; //boolean used to handle container animation which expands from the FAB
   int selectedIndex = 0; //to handle which item is currently selected in the bottom app bar
   String text = "";
@@ -46,21 +47,26 @@ class HomeHadithState extends State<HomeHadith> {
 
       selectedIndex = index;
       text = buttonText+' \n';
+
     });
   }
-  NetworkingPage hadithPage( ) {
-    setState(() {
-   return   NetworkingPage(hadith:widget.hadith,data:text,);
-    });
+Widget getWedjet(bool bol){
+  if(bol){
+   return NetworkingPage(hadith: widget.hadith, data: text,);
+  }else
+  {
+ return LocalAudio(hadith: widget.hadith,localAudioPath: 'disco1.mp3');
   }
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
 // add selection hadith in this page NetworkingPage
-     NetworkingPage(hadith:widget.hadith,data:text,),
-                  ],
+          getWedjet(bol),
+            ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, //specify the location of the FAB
       floatingActionButton: FloatingActionButton(
@@ -91,6 +97,7 @@ class HomeHadithState extends State<HomeHadith> {
               IconButton(
                 //update the bottom app bar view each time an item is clicked
                 onPressed: () {
+                  bol=true;
                   updateTabSelection(0, widget.hadith.textHadith);
                 },
                 iconSize: 27.0,
@@ -104,6 +111,7 @@ class HomeHadithState extends State<HomeHadith> {
               ),
               IconButton(
                 onPressed: () {
+                  bol=true;
                   updateTabSelection(1, widget.hadith.explanationHadith);
                 },
                 iconSize: 27.0,
@@ -120,6 +128,7 @@ class HomeHadithState extends State<HomeHadith> {
               ),
               IconButton(
                 onPressed: () {
+                  bol=true;
                   updateTabSelection(2, widget.hadith.translateNarrator);
                 },
                 iconSize: 27.0,
@@ -132,13 +141,14 @@ class HomeHadithState extends State<HomeHadith> {
               ),
               IconButton(
                 onPressed: () {
+                  bol=false;
                updateTabSelection(3,  widget.hadith.key +' \n' + widget.hadith.nameHadith );
                 },
                 iconSize: 27.0,
                 icon: Icon(
-                  Icons.favorite,
+                  Icons.volume_up,
                   color: selectedIndex == 3
-                      ? Colors.pinkAccent
+                      ? Colors.green
                       : Colors.grey.shade400,
                 ),
               ),
@@ -154,40 +164,8 @@ class HomeHadithState extends State<HomeHadith> {
   }
 }
 
-RichText _convertHadith(BuildContext context,String text) {
-
-  text=text.replaceAll('(', '{');
-  text=text.replaceAll(')', '}');
-
-  List<String> split = text.split(RegExp("{"));
-
-  List<String> hadiths = split.getRange(1, split.length).fold([], (t, e) {
-    var texts = e.split("}");
 
 
-    if (texts.length > 1) {
-      return List.from(t)
-        ..addAll(["{${texts.first}}", "${e.substring(0,texts.first.length)}"]);
-    }
-    return List.from(t)..add("{${texts.first}");
-  });
-
-
-  return RichText(
-    textAlign: TextAlign.right,
-
-    text: TextSpan(
-      style:TextStyle(fontSize:20,color: Colors.brown),
-      //style: DefaultTextStyle.of(context).style,
-      children: [
-
-        TextSpan(text: split.first)]..addAll(
-          hadiths.map((text) => text.contains("{")
-              ? TextSpan(text: text, style: TextStyle(color: Colors.green))
-              : TextSpan(text: text) )
-              .toList()),
-
-    ),
-    textDirection: TextDirection.rtl,
-  );
-}
+//https://www.youtube.com/watch?v=emcdkcWhAk8&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=2
+//https://www.youtube.com/watch?v=QnSAwo1t1to&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=3
+//https://www.youtube.com/watch?v=iKK6344AWPU&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=4

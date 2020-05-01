@@ -30,7 +30,7 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
           height: size.height * .4,
           decoration: BoxDecoration(
             image:   DecorationImage(
-           image:   AssetImage('assets/item.png', ),
+           image:   AssetImage('assets/abuzar.jpg', ),
               fit: BoxFit.cover,
             ),
             gradient: LinearGradient(
@@ -61,7 +61,7 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = size.width*.005
-                    ..color = Colors.black87,
+                    ..color = Colors.white,
                 ),
               ),
               Text(
@@ -72,7 +72,7 @@ class NetworkingPageHeader implements SliverPersistentHeaderDelegate {
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = size.width*.005
-                    ..color = Colors.black87,
+                    ..color = Colors.white,
                 ),
 
 //                style: TextStyle(fontWeight: FontWeight.bold,
