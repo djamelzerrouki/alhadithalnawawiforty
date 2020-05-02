@@ -10,7 +10,7 @@
     <table>
         <tr>
             <td style="text-align: center">
-            <H2 dir="rtl">قائمة الأحاديث</H2>
+            <H2 dir="rtl">فهرس الأربعين النووية</H2>
                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot1.png" width="300"/>
            </td>            
                 <td style="text-align: center">   
