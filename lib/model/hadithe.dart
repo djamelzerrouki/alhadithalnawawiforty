@@ -6,8 +6,9 @@ class Hadith{
   String textHadith;
   String explanationHadith;
   String translateNarrator;
+  String audioHadith;
 
-  Hadith ({this.key, this.nameHadith, this.textHadith, this.explanationHadith,this.translateNarrator});
+  Hadith ({this.key, this.nameHadith, this.textHadith, this.explanationHadith,this.translateNarrator,this.audioHadith});
 
   //To insert the data in the bd, we need to convert it into a Map
   //Para insertar los datos en la bd, necesitamos convertirlo en un Map
@@ -17,6 +18,7 @@ class Hadith{
    "textHadith":textHadith,
    "explanationHadith":explanationHadith,
   "translateNarrator":translateNarrator,
+    "audioHadith":audioHadith,
       };
 
   //to receive the data we need to pass it from Map to json
@@ -28,5 +30,6 @@ class Hadith{
     textHadith:json["textHadith"],
     explanationHadith:json["explanationHadith"],
     translateNarrator:json["translateNarrator"],
+      audioHadith:json["audioHadith"],
   );
 }
