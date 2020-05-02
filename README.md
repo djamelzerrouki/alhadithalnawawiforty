@@ -10,15 +10,25 @@
     <table>
         <tr>
             <td style="text-align: center">
-                    <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/Screenshot_1587805603.png" width="300"/>
+                    <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot1.png" width="300"/>
            </td>            
             <!-- https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/capt2.png -->
             </td>           <td style="text-align: center">   
-                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/capt2.png" width="300"/>
+                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot2.png" width="300"/>
+            </td>           <td style="text-align: center">   
+                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot3.png" width="300"/>
+            </td>
+             <tr>
+            <td style="text-align: center">
+                    <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot4.png" width="300"/>
+           </td>            
+            <!-- https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/capt2.png -->
+            </td>           <td style="text-align: center">   
+                     <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot5.png" width="300"/>
             </td>           <td style="text-align: center">   
                      <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/MyVideo-1.gif" width="300"/>
             </td>
-        
+      </tr>
       </tr>
   </table>
   </div>
