@@ -103,7 +103,7 @@ A Flutter audio plugin (Swift/Java) to play remote or local audio files on iOS /
 
 To use this plugin :
 
-- Add the dependency to your [pubspec.yaml](https://github.com/djamelzerrouki/alhadithalnawawiforty/pubspec.yaml) file.
+- Add the dependency to your [pubspec.yaml](https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/pubspec.yaml) file.
 
 ```yaml
   dependencies:
