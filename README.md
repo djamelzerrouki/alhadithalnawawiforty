@@ -25,7 +25,7 @@
            </td>            
                     <td style="text-align: center">  <H2 dir="rtl">سماع الحديث</H2>
                                      <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/Screenshot5.png" width="300"/>
-            </td>           <td style="text-align: center">   <H2 ><Gif</H2>
+            </td>           <td style="text-align: center">   <H2 >Gif</H2>
                      <img src="https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/captr/MyVideo-1.gif" width="300"/>
             </td>
       </tr>
