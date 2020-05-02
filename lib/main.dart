@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 
              ),
            ),
-           backgroundColor: Colors.black38,
+           backgroundColor: Colors.brown,
          ),
          body: CollapsingList(),
       //body: NetworkingPage(),
