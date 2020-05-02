@@ -55,7 +55,7 @@ Widget getWedjet(bool bol){
    return NetworkingPage(hadith: widget.hadith, data: text,);
   }else
   {
- return LocalAudio(hadith: widget.hadith,localAudioPath: 'disco1.mp3');
+ return LocalAudio(hadith: widget.hadith,localAudioPath: widget.hadith.audioHadith);
   }
 }
 

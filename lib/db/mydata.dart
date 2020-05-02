@@ -413,7 +413,7 @@ textHadith: 'عَنْ أَبِيْ عَبْدِ الرَّحْمَنِ عَبْ�
 //          explanationHadith: '',
 //          translateNarrator: ''
 //     audioHadith:'audioHadith_1.mp3
-,//      ));
+//      ));
 
 
       return listhadiths;
