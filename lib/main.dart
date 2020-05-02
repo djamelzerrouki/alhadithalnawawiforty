@@ -108,7 +108,7 @@ class CollapsingList extends StatelessWidget {
                         textDirection: TextDirection.rtl,
                       ),
 
-                      subtitle: Text(item.textHadith.substring(0,100) , textDirection: TextDirection.rtl,),
+                      subtitle: Text(item.textHadith.substring(0,120) +'...', textDirection: TextDirection.rtl,),
                     trailing:Icon(Icons.library_books,color: Colors.brown,) ,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
