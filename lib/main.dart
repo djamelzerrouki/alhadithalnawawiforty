@@ -14,7 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
        home:   Scaffold(
-        body: CollapsingList(),
+         appBar: AppBar(
+           // Here we take the value from the MyHomePage object that was created by
+           // the App.build method, and use it to set our appbar title.
+           title: Center(
+             child: Text("فهرس الأربعين النووية" ,
+               style: TextStyle(color: Colors.white,
+               fontSize: 20 ),
+               textDirection: TextDirection.rtl,
+
+             ),
+           ),
+           backgroundColor: Colors.black38,
+         ),
+         body: CollapsingList(),
       //body: NetworkingPage(),
       ),
     );
