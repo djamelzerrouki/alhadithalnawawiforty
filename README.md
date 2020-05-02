@@ -32,7 +32,45 @@
       </tr>
   </table>
   </div>
+  
+# Share HAdith [![pub package](https://img.shields.io/pub/v/share.svg)](https://pub.dartlang.org/packages/share)
 
+![Share](https://github.com/djamelzerrouki/alhadithalnawawiforty/blob/master/assets/capture%20hadith/share.PNG?raw=true "Share" )
+
+A Flutter plugin to share content from your Flutter app via the platform's
+share dialog.
+
+Wraps the ACTION_SEND Intent on Android and UIActivityViewController
+on iOS.
+
+## Usage
+
+To use this plugin, add `share` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+
+## Example
+
+Import the library.
+
+``` dart
+import 'package:share/share.dart';
+```
+
+Then invoke the static `share` method anywhere in your Dart code.
+
+``` dart
+Share.share('قَالَ  ﷺ : " فَإِنَّهُ جِبْرِيْلُ أَتَاكُمْ يُعَلَّمُكُمْ دِيْنَكُمْ " .رواه مسلم');
+```
+
+The `share` method also takes an optional `subject` that will be used when
+sharing to email.
+
+``` dart
+Share.share('قَالَ  ﷺ : " فَإِنَّهُ جِبْرِيْلُ أَتَاكُمْ يُعَلَّمُكُمْ دِيْنَكُمْ " .رواه مسلم',
+subject: '! مراتب الدين');
+```
+
+
+ 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
