@@ -163,9 +163,3 @@ Widget getWedjet(bool bol){
     );
   }
 }
-
-
-
-//https://www.youtube.com/watch?v=emcdkcWhAk8&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=2
-//https://www.youtube.com/watch?v=QnSAwo1t1to&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=3
-//https://www.youtube.com/watch?v=iKK6344AWPU&list=PLXS0usquloW_VC2gPb6nu1FFQTxWc1Ww_&index=4

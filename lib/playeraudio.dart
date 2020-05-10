@@ -25,8 +25,9 @@ class LocalAudio extends StatefulWidget {
 class _LocalAudio extends State<LocalAudio> {
   Duration _duration = new Duration();
   Duration _position = new Duration();
-  AudioPlayer  advancedPlayer;
-  AudioCache audioCache;
+
+  static final AudioPlayer  advancedPlayer = new AudioPlayer();
+  final AudioCache  audioCache = new AudioCache(fixedPlayer: advancedPlayer);
 
   @override
   void initState() {
@@ -35,10 +36,11 @@ class _LocalAudio extends State<LocalAudio> {
   }
 
   void initPlayer() {
-    advancedPlayer = new AudioPlayer();
-    audioCache = new AudioCache(fixedPlayer: advancedPlayer);
+
 
     advancedPlayer.durationHandler = (d) => setState(() {
+      onError: (Exception exception) =>
+          print('_loadFile => exception $exception');
       _duration = d;
     });
 
@@ -94,6 +96,20 @@ Padding(
     );
   }
 
+  //// test
+  VoidCallback onPressedplypus(){
+  bool bol=false;
+   if(0==0){
+     bol=true;
+     audioCache.play("path");
+     _btn(Icon(Icons.play_arrow), () => advancedPlayer.pause());
+   }else{
+     bol=false;
+     advancedPlayer.pause();
+     _btn(Icon(Icons.pause), () => advancedPlayer.pause());
+   }
+
+  }
   Widget _btn(Icon icon, VoidCallback onPressed) {
     return ButtonTheme(
       minWidth: 50.0,
@@ -130,7 +146,7 @@ Padding(
 
     return _tab([
       _btn(Icon(Icons.play_arrow), () => audioCache.play(path)),
-      _btn(Icon(Icons.pause), () => advancedPlayer.pause()),
+       _btn(Icon(Icons.pause), () => advancedPlayer.pause()),
       _btn(Icon(Icons.stop), () => advancedPlayer.stop()),
     ]);
   }

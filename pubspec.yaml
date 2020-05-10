@@ -24,6 +24,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+
   audioplayer: 0.8.1
   audioplayer_web: 0.7.1
   path_provider:
@@ -36,7 +37,15 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_launcher_icons: "^0.7.0"
+flutter_icons:
+  image_path: "assets/launcher/hqdefault.png"
+  ios: true
+  android: true
+#  image_path: "assets/launcher/hqdefault.jpg"
+#  image_path_android: "assets/launcher/hqdefault.jpg"
+#  adaptive_icon_background: "assets/launcher/hqdefault.jpg"
+#  adaptive_icon_foreground: "assets/launcher/hqdefault.jpg"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
