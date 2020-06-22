@@ -215,6 +215,6 @@ samples, guidance on mobile development, and a full API reference.
  
 # alhadithalnawawiforty
 
- <H2 dir="rtl">الدال على الخير كفاعله</H2>
+ <H2 dir="rtl">.الدال على الخير كفاعله</H2>
 
 
