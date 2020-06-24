@@ -1,4 +1,4 @@
-# Al Hadith Al Nawawi Forty (  الأحاديث الأربعون النووية ) 📖 🤲
+8# Al Hadith Al Nawawi Forty (  الأحاديث الأربعون النووية ) 📖 🤲
  
 ##### <div dir="rtl"> تطبيق 📱 أحاديث الأربعين النووية 🕌🕋 مع شرح 😇 و بالصوت 📢 متن الأربعين النووية من الأحاديث الصحيحة النبوية الأربعون 💙 في مباني الإسلام  🤲وقواعد الأحكام المعروفة بـ الأربعون النووية ، متن اشتمل على اثنين وأربعين حديثاّ جمعها يحيى بن شرف النووي المتوفى ٦٧٦ هـ.</div>
 
@@ -147,7 +147,8 @@ _positionSubscription = audioPlayer.onAudioPositionChanged.listen(
 _audioPlayerStateSubscription = audioPlayer.onPlayerStateChanged.listen((s) {
   if (s == AudioPlayerState.PLAYING) {
     setState(() => duration = audioPlayer.duration);
-  } else if (s == AudioPlayerState.STOPPED) {
+  } 
+else if (s == AudioPlayerState.STOPPED) {
     onComplete();
     setState(() {
       position = duration;
